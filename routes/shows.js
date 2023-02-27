@@ -62,7 +62,6 @@ router.put('/:id/status', async (req, res) => {
 });
 
 // Deletes a show from the database
-
 router.delete('/:id', async (req, res) => {
     try {
       const { id } = req.params;
@@ -70,7 +69,7 @@ router.delete('/:id', async (req, res) => {
       await Show.deleteOne({ _id: id });  
 
       res.status(200).send(`Show with ID ${id} has been deleted.`);
-      
+
     } catch (err) {
       res.status(500).send('Server Error');
     }
