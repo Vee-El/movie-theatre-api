@@ -2,8 +2,6 @@ const express = require('express');
 const app = express();
 const usersRouter = require('./routes/users');
 const showsRouter = require('./routes/shows');
-
-const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
 
